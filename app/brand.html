@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>InJazz</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+	<link rel="stylesheet" href="css/injazz_icon.css">
+	<!--	<link rel="stylesheet" href="/scss/font-awesome.scss">-->
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/inputmask.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/slicknav.css">
+	<link rel="stylesheet" href="css/stile.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+
+
+	<script src="dist/jquery.inputmask.bundle.js"></script>
+	<script src="dist/inputmask/phone-codes/phone.js"></script>
+	<script src="dist/inputmask/phone-codes/phone-be.js"></script>
+	<script src="dist/inputmask/phone-codes/phone-uk.js"></script>
+	<script src="js/components.js"></script>
+	<script src="js/select-block.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/doubletaptogo.js"></script>
+	<script src="js/jquery.slicknav.js"></script>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.ns-autogrow/1.1.6/jquery.ns-autogrow.min.js"></script>
+
+
+	<script src="js/responsiveCarousel.min.js"></script>
+	<script src="js/jquery.raty-fa.js"></script>
+	<script src="js/main.js"></script>
+
+
+</head>
+<body>
+<!--TODO preloader-->
+<div id="page-preloader"><span class="spinner"></span></div>
+<style>
+	#page-preloader {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		z-index: 100500;
+	}
+
+	#page-preloader .spinner {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		background: url('img/spinner.gif') no-repeat 50% 50%;
+		margin: -16px 0 0 -16px;
+	}
+</style>
+<script>
+	$(window).on('load', function () {
+		var $preloader = $('#page-preloader'),
+			$spinner   = $preloader.find('.spinner');
+		$spinner.fadeOut();
+		$preloader.delay(350).fadeOut('slow');
+	});
+</script>
+<!--TODO preloader-->
+
+<!--Has header-->
+<header>
+	<div class="wrapper">
+		<div class="row row_top">
+			<div class="content">
+				<div class="mob_nav">
+					<nav class="" id="nav" role="navigation">
+						<ul class="nav " id="mobil_menu">
+							<div class="top_container top_container-3">
+								<div class="search_block">
+									<input type="text" class="searcher" placeholder="Что будем искать?">
+									
+									<select name="search-filter" id="search-filter" class="select">
+										<option value="">По всем категориям</option>
+										<option value="">Категориям</option>
+										<option value="">По всем</option>
+									</select>
+									
+									<div class="btn btn_search icon-search"></div>
+									<div class="mob_select-search">
+										<select name="search-filter" id="search-filter_mob" class="select">
+											<option value="">По всем категориям</option>
+											<option value="">Категориям</option>
+											<option value="">По всем</option>
+										</select>
+										
+										<div class="btn btn_search icon-search"></div>
+									</div>
+								</div>
+							</div>
+							<li class=" active">
+								<a href="catalog.html"><span class="menu_ico icon-drum-kit"></span>Музыкальные
+									инструменты</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="catalog.html">Гитары</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="catalog.html">Классические</a></li>
+											<li class="title_chapt-item"><a href="#">Акустические (вестерн)</a></li>
+											<li class="title_chapt-item"><a href="#">Электроакустические</a></li>
+											<li class="title_chapt-item"><a href="#">Silent гитары</a></li>
+											<li class="title_chapt-item"><a href="#">Электрогитары</a></li>
+											<li class="title_chapt-item"><a href="#">Бас гитары</a></li>
+											<li class="title_chapt-item"><a href="#">Укулеле, банджо, мандолины</a></li>
+											<li class="title_chapt-item"><a href="#">Усилители для гитар</a></li>
+											<li class="title_chapt-item"><a href="#">Струны</a></li>
+											<li class="title_chapt-item"><a href="#">Педали эффектов</a></li>
+											<li class="title_chapt-item"><a href="#">Чехлы, кейсы, кофры</a></li>
+											<li class="title_chapt-item"><a href="#">Стойки и подставки</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="catalog.html">Клавишные</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="catalog.html">Рояли</a></li>
+											<li class="title_chapt-item"><a href="#">Пианино</a></li>
+											<li class="title_chapt-item"><a href="#">Дисклавиры</a></li>
+											<li class="title_chapt-item"><a href="#">Синтезаторы</a></li>
+											<li class="title_chapt-item"><a href="#">Цифровые пианино</a></li>
+											<li class="title_chapt-item"><a href="#">MIDI-клавиатуры</a></li>
+											<li class="title_chapt-item"><a href="#">Комбоусилители для клавишных</a>
+											</li>
+											<li class="title_chapt-item"><a href="#">Стулья и банкетки</a></li>
+											<li class="title_chapt-item"><a href="#">Стойки и подставки</a></li>
+											<li class="title_chapt-item"><a href="#">Чехлы, кейсы,сумки</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Духовые</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Трубы, Корнеты, Флюгельгорны</a>
+											</li>
+											<li class="title_chapt-item"><a href="#">Тромбоны, валторны, альты,
+												баритоны, эуфониумы, тубы</a></li>
+											<li class="title_chapt-item"><a href="#">Кларнеты, гобои, фаготы</a></li>
+											<li class="title_chapt-item"><a href="#">Саксофоны</a></li>
+											<li class="title_chapt-item"><a href="#">Флейты, флейты-пикколо</a></li>
+											<li class="title_chapt-item"><a href="#">Блок-флейты</a></li>
+											<li class="title_chapt-item"><a href="#">Средства для ухода</a></li>
+											<li class="title_chapt-item"><a href="#">Трости и мундштуки</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Ударные</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Акустические ударные</a></li>
+											<li class="title_chapt-item"><a href="#">Стойки и механика</a></li>
+											<li class="title_chapt-item"><a href="#">Электронные ударные</a></li>
+											<li class="title_chapt-item"><a href="#">Тарелки</a></li>
+											<li class="title_chapt-item"><a href="#">Палочки и щётки</a></li>
+											<li class="title_chapt-item"><a href="#">Пластики</a></li>
+											<li class="title_chapt-item"><a href="#">Маршевые барабаны</a></li>
+											<li class="title_chapt-item"><a href="#">Перкуссия</a></li>
+											<li class="title_chapt-item"><a href="#">Концертная перкуссия</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Струнно-смычновые</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Скрипки</a></li>
+											<li class="title_chapt-item"><a href="#">Альты</a></li>
+											<li class="title_chapt-item"><a href="#">Виолончели</a></li>
+											<li class="title_chapt-item"><a href="#">Контрабасы</a></li>
+											<li class="title_chapt-item"><a href="#">Электронные струнно-смычковые</a>
+											</li>
+											<li class="title_chapt-item"><a href="#">Струны</a></li>
+											<li class="title_chapt-item"><a href="#">Чехлы, футляры и подставки</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Язычковые</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Аккордеоны</a></li>
+											<li class="title_chapt-item"><a href="#">Баяны</a></li>
+											<li class="title_chapt-item"><a href="#">Гармони</a></li>
+											<li class="title_chapt-item"><a href="#">Губные гармошки</a></li>
+											<li class="title_chapt-item"><a href="#">Пианики</a></li>
+											<li class="title_chapt-item"><a href="#">Сумки, чехлы, кейсы</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Аксессуары для музыкантов</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Метрономы</a></li>
+											<li class="title_chapt-item"><a href="#">Пюпитры</a></li>
+											<li class="title_chapt-item"><a href="#">Камертоны</a></li>
+											<li class="title_chapt-item"><a href="#">Подсветка для нот</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="catalog.html"><span class="menu_ico icon-big-vintage-mic"></span>Микрофоны и
+									наушники</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="#">Наушники</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Полноразмерные</a></li>
+											<li class="title_chapt-item"><a href="#">Вкладыши</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары для наушник</a></li>
+										
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Микрофоны проводные</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Вокальные</a></li>
+											<li class="title_chapt-item"><a href="#">Инструментальные</a></li>
+											<li class="title_chapt-item"><a href="#">Студийные</a></li>
+											<li class="title_chapt-item"><a href="#">Петличные</a></li>
+											<li class="title_chapt-item"><a href="#">Накамерные</a></li>
+											<li class="title_chapt-item"><a href="#">Гуснэки</a></li>
+											<li class="title_chapt-item"><a href="#">Хэдсеты</a></li>
+											<li class="title_chapt-item"><a href="#">Инсталляционные</a></li>
+										
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Радиосистемы</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">С ручным передатчиком</a></li>
+											<li class="title_chapt-item"><a href="#">С поясным передатчиком</a></li>
+											<li class="title_chapt-item"><a href="#">Гитарные</a></li>
+											<li class="title_chapt-item"><a href="#">Комбинированные</a></li>
+											<li class="title_chapt-item"><a href="#">Накамерные</a></li>
+											<li class="title_chapt-item"><a href="#">Передатчики</a></li>
+											<li class="title_chapt-item"><a href="#">In-ear мониторы</a></li>
+											<li class="title_chapt-item"><a href="#">Приёмники</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Аксессуары для микрофонов и радиосистем</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Ветрозащиты</a></li>
+											<li class="title_chapt-item"><a href="#">Держатели</a></li>
+											<li class="title_chapt-item"><a href="#">Стойки</a></li>
+											<li class="title_chapt-item"><a href="#">Капсюли</a></li>
+											<li class="title_chapt-item"><a href="#">Предусилители</a></li>
+										
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">конференц-системы</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="catalog.html"><span class="menu_ico icon-big-speaker"></span>Звук</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="#">микшерные консоли</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Аналоговые</a></li>
+											<li class="title_chapt-item"><a href="#">Цифровые</a></li>
+											<li class="title_chapt-item"><a href="#">Со встроенным усилителем</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">усилители</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Усилители мощности</a></li>
+											<li class="title_chapt-item"><a href="#">Трансляционные</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Акустические системы</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Пассивные</a></li>
+											<li class="title_chapt-item"><a href="#">Активные</a></li>
+											<li class="title_chapt-item"><a href="#">Сабвуферы</a></li>
+											<li class="title_chapt-item"><a href="#">Усилительные комплекты</a></li>
+											<li class="title_chapt-item"><a href="#">Трансляционные</a></li>
+											<li class="title_chapt-item"><a href="#">Сценические мониторы</a></li>
+											<li class="title_chapt-item"><a href="#">Линейные массивы</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Процессоры</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Аналоговые</a></li>
+											<li class="title_chapt-item"><a href="#">Вокальные</a></li>
+											<li class="title_chapt-item"><a href="#">Цифровые матричные процессоры</a>
+											</li>
+											<li class="title_chapt-item"><a href="#">Цифровые микширующие платформы</a>
+											</li>
+											<li class="title_chapt-item"><a href="#">Процессоры</a></li>
+											<li class="title_chapt-item"><a href="#">Процессоры акустических систем</a>
+											</li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">проигрыватели</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">CD, MP3, USB, SD</a></li>
+											<li class="title_chapt-item"><a href="#">Виниловые</a></li>
+											<li class="title_chapt-item"><a href="#">Встраиваемые модули</a></li>
+											<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">караоке системы</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="catalog.html"><span class="menu_ico icon-concert-sportlight"></span>Свет</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="#">Moving Lights</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Головы рисующие</a></li>
+											<li class="title_chapt-item"><a href="#">Головы заливного света</a></li>
+											<li class="title_chapt-item"><a href="#">Головы лазерные</a></li>
+											<li class="title_chapt-item"><a href="#">Сканеры</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Генераторы эффектов</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Дым</a></li>
+											<li class="title_chapt-item"><a href="#">Снег</a></li>
+											<li class="title_chapt-item"><a href="#">Пузыри</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">аксессуары</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Жидкость для генераторов
+												эффектов</a></li>
+											<li class="title_chapt-item"><a href="#">Ароматизаторы для генераторов
+												эффектов</a></li>
+											<li class="title_chapt-item"><a href="#">Сумки</a></li>
+											<li class="title_chapt-item"><a href="#">Стойки, держатели</a></li>
+											<li class="title_chapt-item"><a href="#">Лампы</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">Лазеры</a></li>
+									<li class="title_chapt"><a href="#">Световые контроллеры DMX</a></li>
+									<li class="title_chapt"><a href="#">Сценическое оборудование</a></li>
+									<li class="title_chapt"><a href="#">прожекторы</a></li>
+									<li class="title_chapt"><a href="#">зеркальные шары</a></li>
+									<li class="title_chapt"><a href="#">стробоскопы</a></li>
+									<li class="title_chapt"><a href="#">Световые эффекты</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="catalog.html"><span class="menu_ico icon-music-recorder-1"></span>Hi-Fi &
+									Hi-End</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="#">Проигрыватели</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">CD, DVD, USB, SD</a></li>
+											<li class="title_chapt-item"><a href="#">Виниловые</a></li>
+											<li class="title_chapt-item"><a href="#">Blu-ray</a></li>
+											<li class="title_chapt-item"><a href="#">Cетевые медиа-плееры</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">акустические системы</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Напольные</a></li>
+											<li class="title_chapt-item"><a href="#">Центрального канала</a></li>
+											<li class="title_chapt-item"><a href="#">Полочная акустика</a></li>
+											<li class="title_chapt-item"><a href="#">Сабвуферы</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">ресиверы</a></li>
+									<li class="title_chapt"><a href="#">Усилители</a></li>
+									<li class="title_chapt"><a href="#">аудиосистемы</a></li>
+									<li class="title_chapt"><a href="#">домашние кинотеатры</a></li>
+									<li class="title_chapt"><a href="#">аксессуары для оборудования</a></li>
+									<li class="title_chapt"><a href="#">прочее оборудование</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="catalog.html"><span class="menu_ico icon-music-on-laptop"></span>Студия</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="#">программное обеспечение</a></li>
+									<li class="title_chapt"><a href="#">midi клавиатуры</a></li>
+									<li class="title_chapt"><a href="#">студийные аксессуары</a></li>
+									<li class="title_chapt"><a href="#">процессоры обработки звука</a></li>
+									<li class="title_chapt"><a href="#">аудио и midi интерфейсы</a></li>
+									<li class="title_chapt"><a href="#">midi контроллеры</a></li>
+									<li class="title_chapt"><a href="#">предусилители</a></li>
+									<li class="title_chapt"><a href="#">студийные мониторы</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="catalog.html"><span class="menu_ico icon-double-plug"></span>Коммутация</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="#">готовые кабели</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Микрофонные</a></li>
+											<li class="title_chapt-item"><a href="#">Инструментальные</a></li>
+											<li class="title_chapt-item"><a href="#">Акустические</a></li>
+											<li class="title_chapt-item"><a href="#">AES/EBU, S/PDIF, DMX</a></li>
+											<li class="title_chapt-item"><a href="#">Оптические</a></li>
+											<li class="title_chapt-item"><a href="#">LAN</a></li>
+											<li class="title_chapt-item"><a href="#">MIDI, USB, Firewire</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">кабели в бухтах</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Микрофонные</a></li>
+											<li class="title_chapt-item"><a href="#">Инструментальные</a></li>
+											<li class="title_chapt-item"><a href="#">Акустические</a></li>
+											<li class="title_chapt-item"><a href="#">AES/EBU, S/PDIF, DMX</a></li>
+											<li class="title_chapt-item"><a href="#">Оптические</a></li>
+											<li class="title_chapt-item"><a href="#">LAN</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">мультикоры</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Готовые</a></li>
+											<li class="title_chapt-item"><a href="#">В бухтах</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">соединители</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Кабельные</a></li>
+											<li class="title_chapt-item"><a href="#">Панельные</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">di-box</a>
+										<ul class="sub_dropDown">
+											<li class="title_chapt-item"><a href="#">Активные</a></li>
+											<li class="title_chapt-item"><a href="#">Пассивные</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">аксессуары</a></li>
+									<li class="title_chapt"><a href="#">переходники</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="catalog.html"><span class="menu_ico icon-old-gramophone"></span>Комиссионка</a>
+								<ul class="dropDown">
+									<li class="title_chapt"><a href="#">комиссионный товар</a>
+										<ul class="sub_dropDown comission">
+											<li class="title_chapt-item"><a href="#">Гитары</a></li>
+											<li class="title_chapt-item"><a href="#">Клавишные</a></li>
+											<li class="title_chapt-item"><a href="#">Духовые</a></li>
+											<li class="title_chapt-item"><a href="#">Ударные</a></li>
+											<li class="title_chapt-item"><a href="#">Струнно-смычковые</a></li>
+											<li class="title_chapt-item"><a href="#">Язычковые</a></li>
+											<li class="title_chapt-item"><a href="#">Наушники</a></li>
+											<li class="title_chapt-item"><a href="#">Микрофоны проводные</a></li>
+											<li class="title_chapt-item"><a href="#">Радиосистемы</a></li>
+											<li class="title_chapt-item"><a href="#">Конференц-системы</a></li>
+											<li class="title_chapt-item"><a href="#">Микшерные консоли</a></li>
+											<li class="title_chapt-item"><a href="#">Усилители</a></li>
+											<li class="title_chapt-item"><a href="#">Акустические системы</a></li>
+											<li class="title_chapt-item"><a href="#">Процессоры</a></li>
+											<li class="title_chapt-item"><a href="#">Караоке системы</a></li>
+											<li class="title_chapt-item"><a href="#">Проигрыватели</a></li>
+											<li class="title_chapt-item"><a href="#">Ресиверы</a></li>
+											<li class="title_chapt-item"><a href="#">Домашние кинотеатры</a></li>
+											<li class="title_chapt-item"><a href="#">Аудиосистемы</a></li>
+											<li class="title_chapt-item"><a href="#">Аудио и MIDI интерфейсы</a></li>
+											<li class="title_chapt-item"><a href="#">MIDI клавиатуры</a></li>
+											<li class="title_chapt-item"><a href="#">MIDI контроллеры</a></li>
+											<li class="title_chapt-item"><a href="#">Предусилители</a></li>
+											<li class="title_chapt-item"><a href="#">Процессоры обработки звука</a></li>
+											<li class="title_chapt-item"><a href="#">Moving Lights</a></li>
+											<li class="title_chapt-item"><a href="#">Генераторы Эффектов</a></li>
+											<li class="title_chapt-item"><a href="#">Лазеры</a></li>
+											<li class="title_chapt-item"><a href="#">Световые контроллеры DMX</a></li>
+											<li class="title_chapt-item"><a href="#">Световые эффекты</a></li>
+											<li class="title_chapt-item"><a href="#">Сценическое оборудование</a></li>
+											<li class="title_chapt-item"><a href="#">Прожекторы</a></li>
+											<li class="title_chapt-item"><a href="#">Стробоскопы</a></li>
+										</ul>
+									</li>
+									<li class="title_chapt"><a href="#">условия комиссионного магазина</a></li>
+								</ul>
+							</li>
+							<li>
+							</li>
+							<hr>
+							<div class="bottom_mob-menu">
+								<ul class="nav-bottom ">
+									<li>
+										<a href="#">Аренда</a>
+									</li>
+									<li><a href="#">Инсталляция</a></li>
+								</ul>
+							</div>
+							<hr>
+							<div class="footer_mob-menu">
+								<ul class="nav-footer ">
+									
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Все о товарах</a></li>
+									<li><a href="#">Дисконтная программа</a></li>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Бренды</a></li>
+									<li><a href="#">Официальные дилеры </a></li>
+									<li><a href="#">Сервисный центр</a></li>
+								</ul>
+							</div>
+							<hr>
+							<div class="cabinet_mob-menu">
+								<ul class="nav-cabinet ">
+									<div class="catr-row">
+										<ul class="">
+											<li>
+												<div class="icon-user_lk"></div>
+												<p>Войти</p>
+											</li>
+											<li>
+												<div class="icon-cart_i"><span class="totalGoods">0</span></div>
+												<p>Корзина</p>
+											</li>
+										</ul>
+									</div>
+								</ul>
+							</div>
+							<hr>
+							<div class="social_mob-menu">
+								<ul class="nav-fsocial ">
+									<li>
+										<a href="#" class="soc_icon icon-facebook"></a><a href="#"
+										                                                  class="soc_icon icon-twitter"></a><a
+											href="#" class="soc_icon icon-gplus"></a><a href="#"
+										                                                class="soc_icon icon-instagram"></a><a
+											href="#" class="soc_icon icon-youtube"></a>
+									</li>
+									<li>
+										<div class="top_stock"><a href="#" class="trats">Акции %</a></div>
+										<div class="top_delivery"><a href="#" class="trats">Оплата и Доставка</a></div>
+									</li>
+								</ul>
+							</div>
+						
+						</ul>
+					
+					</nav>
+				</div>
+				<div class="top_container top_container-1">
+					<div class="social_row">
+						<ul class="cos_icons">
+							<li class="soc_icon"><a href="#" class="icon-facebook"></a></li>
+							<li class="soc_icon"><a href="#" class="icon-twitter"></a></li>
+							<li class="soc_icon"><a href="#" class="icon-gplus"></a></li>
+							<li class="soc_icon"><a href="#" class="icon-instagram"></a></li>
+							<li class="soc_icon"><a href="#" class="icon-youtube"></a></li>
+						</ul>
+					</div>
+					<div class="logo">
+						<a href="index.html">
+							<!--<img src="img/logo.png" alt="" class="top_logo">-->
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.97 32.78"><title>logo_rus</title>
+								<path d="M226.65,73.45h16.18V71h1.6v2.4h14V71H260v2.4h14V71h1.6v2.4h14V71h1.6v2.4h14V71h1.6v2.4h14V71h1.6v2.4h14V71h1.6v2.4h14V71h1.6v2.4h14.94v0.3H353.69v3.61h14.94v0.3H353.69v3.61h5.68a2.66,2.66,0,0,1,3.16,0h6.1v0.3h-5.75a2.66,2.66,0,0,1,.07,3.61h5.69v0.3h-6a2.66,2.66,0,0,1-3.35,0h-5.59v3.61h14.94v0.3H353.69V93h14.94v0.3H353.69v2.47h-1.6V93.31h-14v2.47h-1.6V93.31h-14v2.47h-1.6V93.31h-14v2.47h-1.6V93.31h-14v2.47h-1.6V93.31h-14v2.47H274V93.31H260v2.47h-1.6V93.31h-14v2.47h-1.6V93.31H226.65V93h16.18V89.4H226.65v-0.3h16.18V85.48H236.9a2.66,2.66,0,0,1-3.35,0h-6.9v-0.3h6.58a2.66,2.66,0,0,1,.07-3.61h-6.65v-0.3h7a2.66,2.66,0,0,1,3.16,0h6V77.66H226.65v-0.3h16.18V73.75H226.65v-0.3h0Zm125.43,0.3H349a1.17,1.17,0,0,1,.33,1v2.61h2.76V73.75h0Zm-10.86,0h-3.15v3.61h3.1a1.42,1.42,0,0,1-.21-1V74.83a1.34,1.34,0,0,1,.26-1.08h0Zm-4.75,0h-2.66a1.17,1.17,0,0,1,.33,1v2.61h2.33V73.75h0Zm-10.42,0h-3.59v3.61H326a1.41,1.41,0,0,1-.21-1V74.83a1.34,1.34,0,0,1,.26-1.08h0Zm-5.18,0h-4.13a1.28,1.28,0,0,1,.48,1l0.37,2.61h3.28V73.75h0Zm-9,0h-5.05v3.61h4.24l0.35-2.64a1.19,1.19,0,0,1,.47-1h0Zm-6.65,0h-3.48a0.61,0.61,0,0,1,.19.17,2.15,2.15,0,0,1,.12.88v2.56h3.18V73.75h0Zm-6.34,0h-7.67v3.61h7.37V74.83a1.26,1.26,0,0,1,.3-1.08h0Zm-9.27,0h-14v3.61h14V73.75h0Zm-15.61,0h-2.38a1.31,1.31,0,0,1,.38,1.17v2.44h2V73.75h0Zm-5.15,0h-3.68a1.66,1.66,0,0,1,.41.76l1,2.85h2V74.89a1.35,1.35,0,0,1,.33-1.14h0Zm-6.46,0H260v3.61h2.07V74.89a1.31,1.31,0,0,1,.32-1.14h0Zm-4,0h-5.37a1.41,1.41,0,0,1,.33,1.17v2.44h5V73.75h0Zm-8.17,0h-5.84v3.61h5.5V74.92a1.37,1.37,0,0,1,.33-1.17h0Zm63.87,3.61h0.43c0-.22-0.1-0.3-0.22-0.3s-0.18.09-.21,0.3h0Zm38,0.3h-2.76a2.28,2.28,0,0,1-.41,1l-1.22,2.57h4.39V77.66h0Zm-6.19,0h-7.81v3.61h6.21L345.84,78a0.48,0.48,0,0,0,.06-0.38h0Zm-9.41,0h-2.33a2.28,2.28,0,0,1-.41,1l-1.22,2.57h4V77.66h0Zm-5.76,0h-8.25v3.61h6.65L330.67,78a0.49,0.49,0,0,0,.06-0.38h0Zm-9.85,0h-3.24l0.51,3.61h2.72V77.66h0Zm-6.27,0H314.1l-0.27,3.61h1.06l-0.3-3.61h0Zm-3.54,0h-4.2v3.61h3.72l0.48-3.61h0Zm-5.79,0h-3.18v3.61h3.18V77.66h0Zm-6.64,0h-7.37v3.61h7.37V77.66h0Zm-9,0h-14v3.61h5.28a2.66,2.66,0,0,1,3.16,0h5.58V77.66h0Zm-15.61,0h-2v3.61h2V77.66h0Zm-5.49,0H266.7l1.22,3.61h0.64V77.66h0Zm-6.45,0H260v3.61h2.07V77.66h0Zm-3.67,0h-5v3.61h5V77.66h0Zm-8.51,0h-5.5v3.61h5.5V77.66h0ZM359,81.57h-5.33v3.61H359a2.66,2.66,0,0,1,.07-3.61h0Zm-6.94,0h-4.53l-1.71,3.61h6.24V81.57h0Zm-7.94,0h-6.06v3.61h4.33l1.73-3.61h0Zm-7.66,0h-4.1l-1.71,3.61h5.81V81.57h0Zm-7.51,0h-6.5v3.61h4.77L329,81.57h0Zm-8.1,0h-2.68l0.51,3.61h2.17V81.57h0Zm-6,0h-1.11l-0.2,2.67c0,0.18.09,0.32,0.38,0.32h0.73c0.29,0,.44-0.12.41-0.32l-0.22-2.67h0Zm-4.38,0h-3.68v3.61h3.2l0.48-3.61h0Zm-5.28,0h-3.18v3.61h3.18V81.57h0Zm-6.64,0h-7.37v3.61h7.37V81.57h0Zm-9,0h-5.23a2.66,2.66,0,0,1,.07,3.61h5.16V81.57h0Zm-9.08,0h-4.93v3.61h4.86a2.66,2.66,0,0,1,.07-3.61h0Zm-6.53,0h-2v3.61h2V81.57h0Zm-5.49,0H268l0.07,0.21c0.12,0.35.2,0.41,0.32,0.41s0.15-.12.15-0.56V81.57h0Zm-6.45,0H260v3.61h2.07V81.57h0Zm-3.67,0h-5v3.61h5V81.57h0Zm-8.51,0h-5.5v3.61h5.5V81.57h0Zm-7.1,0h-5.69a2.66,2.66,0,0,1,.07,3.61h5.62V81.57h0Zm22.77,3.61h0.55l-0.08-.23c-0.12-.35-0.21-0.41-0.32-0.41s-0.15.12-.15,0.56v0.09h0Zm86.49,0.3H345.7l-1.45,3.05a0.63,0.63,0,0,0-.06.55h7.89V85.48h0Zm-9.82,0h-4.19v3.61h2.62a3.19,3.19,0,0,1,.47-1.33l1.09-2.28h0Zm-5.79,0h-6l-1.45,3.05a0.63,0.63,0,0,0-.06.55h7.46V85.48h0Zm-9.38,0h-4.62v3.61h3.06a3.21,3.21,0,0,1,.47-1.33l1.09-2.28h0Zm-6.22,0h-2.13l0.51,3.61h1.61V85.48h0Zm-10.85,0h-3.16v3.61h2.69L310,85.48h0Zm-4.76,0h-3.18v2.66c0,0.33,0,.65,0,1h3.21V85.48h0Zm-6.64,0h-7.37v3.61H298a1.16,1.16,0,0,0,.58-1.23V85.48h0Zm-9,0h-5.48a2.66,2.66,0,0,1-3.35,0h-5.18v3.61h14V85.48h0Zm-15.61,0h-2v3.61h2V85.48h0Zm-7.8,0H265.6v3.61h1.87l-1.22-3.61h0Zm-4.14,0H260v3.61h2.07V85.48h0Zm-3.67,0h-5v3.61h5V85.48h0Zm-8.51,0h-5.5v3.61h5.5V85.48h0Zm63.26,3.61h2.37l-0.08-.6A0.42,0.42,0,0,0,315,88h-1.23c-0.32,0-.44.06-0.5,0.47l-0.07.6h0Zm38.89,0.3h-3a1.36,1.36,0,0,1,.29,1.11V92a1.16,1.16,0,0,1-.33,1h3.06V89.4h0Zm-11.38,0h-2.63V93H341a1.24,1.24,0,0,1-.26-1V89.4h0Zm-4.23,0H333.9a1.36,1.36,0,0,1,.29,1.11V92a1.16,1.16,0,0,1-.33,1h2.63V89.4h0Zm-10.94,0h-3.06V93h3.33a1.24,1.24,0,0,1-.26-1V89.4h0Zm-4.66,0H319.3l0.47,3.32a0.41,0.41,0,0,1-.06.29h1.16V89.4h0Zm-5.26,0h-2.45l-0.37,3.29a0.77,0.77,0,0,1-.07.32h3.45a0.83,0.83,0,0,1-.12-0.37l-0.43-3.23h0Zm-6.1,0h-2.65V93h2.27a0.38,0.38,0,0,1-.07-0.29l0.44-3.32h0Zm-4.24,0H302a6,6,0,0,1-.61,2.15A2.88,2.88,0,0,1,299.62,93h5.64V89.4h0Zm-9.11,0h-4.89V93h5a0.4,0.4,0,0,1-.17-0.2A1.91,1.91,0,0,1,296,92V90.32a2,2,0,0,1,.15-0.91v0h0Zm-6.49,0h-14V93h14V89.4h0ZM274,89.4h-2v2.44a1.33,1.33,0,0,1-.33,1.17H274V89.4h0Zm-6.48,0h-2v2.47a1.36,1.36,0,0,1-.33,1.14h3.68a1.67,1.67,0,0,1-.41-0.76l-1-2.85h0Zm-5.46,0H260V93h2.45a1.31,1.31,0,0,1-.38-1.17V89.4h0Zm-3.67,0h-5v2.53a1.33,1.33,0,0,1-.28,1.08h5.33V89.4h0Zm-8.51,0h-5.5V93h5.81a1.33,1.33,0,0,1-.31-1.14V89.4h0Zm-7,12.14c0,1.76.66,2.28,2,2.28a5.55,5.55,0,0,0,1.25-.14l-0.19-.9a3.2,3.2,0,0,1-.85.12c-0.87,0-1.19-.16-1.19-1.35s0.32-1.32,1.19-1.32a3,3,0,0,1,.85.12l0.19-.88a5.22,5.22,0,0,0-1.25-.15c-1.38,0-2,.46-2,2.22h0Zm3.84-2.11v4.31H250v-0.87h-2.22v-0.94h1.59v-0.85h-1.59V100.3H250V99.42h-3.21Zm5.81,4.31V100.3H254V99.42h-3.88v0.87h1.44v3.44h1Zm2.94-.85v-1.23h1.11c0.25,0,.41.17,0.41,0.61s-0.13.62-.4,0.62h-1.12Zm-1-3.46v4.31H257c0.82,0,1.14-.56,1.14-1.46a1.23,1.23,0,0,0-1.16-1.45h-1.45V99.42h-1Zm8.36,2.52c-0.32-.81-0.75-1.81-1.11-2.52h-1.33v4.31h1v-2.91c0.31,0.69.74,1.84,1,2.55h0.79c0.28-.73.74-1.83,1.06-2.55v2.91h1V99.42H264c-0.34.71-.77,1.71-1.08,2.52h0Zm4.9-.43a17,17,0,0,0-1-2.1h-1.2a24.16,24.16,0,0,1,1.54,3.2,11.69,11.69,0,0,1-.72,1.11h1.27a31.77,31.77,0,0,0,2.13-4.31H268.7a21.8,21.8,0,0,1-.89,2.1h0Zm3.07,0.4h0.75c0.42,0,.63.11,0.63,0.5s-0.21.49-1,.49a5.3,5.3,0,0,1-1.11-.12l-0.19.88a8.46,8.46,0,0,0,1.53.15c1.25,0,1.82-.32,1.82-1.24a0.93,0.93,0,0,0-1-1.11,0.85,0.85,0,0,0,.92-1c0-.82-0.44-1.12-1.72-1.12a7.89,7.89,0,0,0-1.51.15l0.19,0.87a5,5,0,0,1,1.09-.12c0.72,0,.9.1,0.9,0.41s-0.17.43-.59,0.43h-0.72v0.85h0Zm4.34,1v-1.23h1.11c0.25,0,.41.17,0.41,0.61s-0.13.62-.4,0.62h-1.13Zm-1-3.46v4.31h2.46c0.82,0,1.14-.56,1.14-1.46a1.23,1.23,0,0,0-1.16-1.45h-1.45V99.42h-1Zm4,0v4.31h1V99.42h-1Zm5.83,4.31c-0.62-1.87-1.06-2.2-1.52-2.37a13.64,13.64,0,0,0,1.41-1.94h-1.19a15.73,15.73,0,0,1-1.52,2.07V99.42h-1v4.31h1v-2c0.68,0.07,1.09.43,1.64,2H284Zm3.28,0h1.1c-0.46-1.12-1.11-3-1.51-4.31h-1.54c-0.49,1.21-1.17,3.1-1.53,4.31h1.06c0.07-.27.17-0.59,0.28-1h1.77c0.13,0.36.26,0.7,0.36,1h0Zm-1.16-3.44c0.13,0.46.32,1,.51,1.63h-1.24c0.2-.6.4-1.18,0.56-1.63h0.16Zm5.11,0v3.44h1V99.42h-3a16,16,0,0,1-.87,4.31h1.06a14.66,14.66,0,0,0,.74-3.44h1.1Zm3,2.59v-1.23h1.11c0.25,0,.41.17,0.41,0.61s-0.13.62-.4,0.62h-1.12Zm-1-3.46v4.31h2.46c0.82,0,1.14-.56,1.14-1.46a1.23,1.23,0,0,0-1.16-1.45h-1.45V99.42h-1Zm5.32,2.49h1.62v1.82h1V99.42h-1V101h-1.62V99.42h-1v4.31h1v-1.82h0Zm4.62,1v-1.23h1.11c0.25,0,.41.17,0.41,0.61s-0.13.62-.4,0.62h-1.12Zm-1-3.46v4.31h2.46c0.82,0,1.14-.56,1.14-1.46a1.23,1.23,0,0,0-1.16-1.45h-1.45V99.42h-1Zm4,0v4.31h1V99.42h-1Zm2.74,0h-1.3c0.38,0.48,1,1.3,1.61,2.13-0.62.87-1.27,1.74-1.61,2.18h1.24c0.3-.38.64-0.83,1-1.31,0.35,0.49.66,0.95,0.9,1.31H312c-0.35-.52-0.93-1.36-1.52-2.19,0.53-.75,1.05-1.51,1.45-2.11H310.7c-0.2.34-.51,0.8-0.83,1.25l-0.93-1.25h0Zm7.55,2.52c-0.32-.81-0.75-1.81-1.11-2.52H314v4.31h1v-2.91c0.31,0.69.74,1.84,1,2.55h0.79c0.28-.73.74-1.83,1.06-2.55v2.91h1V99.42h-1.27c-0.34.71-.77,1.71-1.08,2.52h0Zm6.21,1.79h1.1c-0.46-1.12-1.11-3-1.51-4.31h-1.54c-0.49,1.21-1.17,3.1-1.53,4.31h1.06c0.07-.27.17-0.59,0.28-1h1.77c0.13,0.36.26,0.7,0.37,1h0Zm-1.16-3.44c0.13,0.46.32,1,.51,1.63h-1.24c0.2-.6.4-1.18,0.56-1.63h0.16Zm3.57,3.44V100.3h2V99.42h-3v4.31h1Zm5.25,0h1.1c-0.46-1.12-1.11-3-1.51-4.31H328.4c-0.49,1.21-1.17,3.1-1.53,4.31h1.06c0.07-.27.17-0.59,0.28-1H330c0.13,0.36.26,0.7,0.37,1h0Zm-1.16-3.44c0.13,0.46.32,1,.51,1.63h-1.24c0.2-.6.4-1.18,0.56-1.63h0.16Zm3.21,1.63h0.75c0.42,0,.63.11,0.63,0.5s-0.21.49-1,.49a5.3,5.3,0,0,1-1.11-.12l-0.19.88a8.47,8.47,0,0,0,1.53.15c1.25,0,1.82-.32,1.82-1.24a0.93,0.93,0,0,0-1-1.11,0.85,0.85,0,0,0,.92-1c0-.82-0.44-1.12-1.72-1.12a7.89,7.89,0,0,0-1.51.15l0.19,0.87a5,5,0,0,1,1.09-.12c0.72,0,.9.1,0.9,0.41s-0.17.43-.59,0.43h-0.72v0.85h0Zm7.25-2.5h-1.22c-0.53,1-1.12,2-1.71,3v-3h-1v4.31h1.3c0.56-.9,1.11-1.88,1.62-2.84v2.84h1V99.42h0Zm2,2.49h1.62v1.82h1V99.42h-1V101h-1.62V99.42h-1v4.31h1v-1.82h0Zm5.52-2.6c-1.38,0-2.1.46-2.1,2.21s0.71,2.29,2.1,2.29,2.1-.51,2.1-2.29-0.72-2.21-2.1-2.21h0Zm0,3.59c-0.87,0-1-.17-1-1.37s0.16-1.31,1-1.31,1,0.14,1,1.31-0.16,1.37-1,1.37h0Zm3.89,0v-1h1.18c0.22,0,.34.16,0.34,0.51s-0.1.48-.31,0.48h-1.21Zm0-2.62h1.17c0.19,0,.28.11,0.28,0.41s-0.09.41-.28,0.41h-1.17v-0.82h0Zm1.6,1.19a0.84,0.84,0,0,0,.92-1,0.89,0.89,0,0,0-1.08-1h-2.44v4.31h2.46a1,1,0,0,0,1.14-1.16,0.91,0.91,0,0,0-1-1.11h0Z"
+								      transform="translate(-226.65 -71.04)" style="fill:#000"/>
+							</svg>
+						
+						
+						</a>
+					</div>
+				</div>
+				<!--<div class="top_container top_container-2">
+					<div class="top_top-row">
+						<div class="phones_link">
+							<a href="#" class="phone">(044) 234-56-78</a><a href="#" class="phone">(067) 234-56-78</a>
+						</div>
+						<div class="lang_block">
+							<div class="lang">
+								<ul class="language">
+									<li class="lang_ru">RU</li>
+									<li class="lang_ua active">UA</li>
+								</ul>
+							</div>
+							<div class="top_delivery"><a href="#" class="trats">Оплата и Доставка</a></div>
+						</div>
+					</div>
+				</div>-->
+				<div class="top_container top_container-3">
+					<div class="top_top-row">
+						<div class="phones_link">
+							<a href="#" class="phone">(044) 234-56-78</a><a href="#" class="phone">(067) 234-56-78</a>
+						</div>
+						<div class="lang_block">
+							<div class="lang">
+								<ul class="language">
+									<li class="lang_ua">УКР</li>
+									<li class="lang_ru active">РУ</li>
+								</ul>
+							</div>
+							<div class="top_delivery"><a href="delivery_pay.html" class="trats">Оплата и доставка</a>
+							</div>
+						</div>
+					</div>
+					<div class="search_block">
+						<input type="text" class="searcher" placeholder="Что будем искать?">
+						
+						<select name="search-filter" id="search-filter" class="select">
+							<option value="">По всем категориям</option>
+							<option value="">Категориям</option>
+							<option value="">По всем</option>
+						</select>
+						
+						<div class="btn btn_search icon-search"></div>
+						<div class="mob_select-search">
+							<select name="search-filter" id="search-filter_mob" class="select">
+								<option value="">По всем категориям</option>
+								<option value="">Категориям</option>
+								<option value="">По всем</option>
+							</select>
+							
+							<div class="btn btn_search icon-search"></div>
+						</div>
+					</div>
+				</div>
+				<div class="top_container top_container-4">
+					<div class="lang_block">
+						<div class="top_stock"><a href="#" class="trats">Акции %</a></div>
+						<div class="top_contact"><a href="contacts.html" class="trats">Контакты</a></div>
+					</div>
+					<div class="catr-row">
+						<ul class="">
+							<li>
+								<div class="icon-user_lk"></div>
+								<p>Войти</p>
+							</li>
+							<li>
+								<a href="#modal-box_prdc" class="modal-show  datepicker-initializer">
+									<div class="icon-cart_i"><span class="totalGoods">0</span></div>
+									<p>Корзина</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row row_bottom">
+			<div class="content">
+				<nav class="nav-1">
+					<ul class="nav ">
+						<li class=" active">
+							<a href="catalog.html">Музыкальные инструменты</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/hevy-metal-electric-guitar.png"
+										alt=""></span>Гитары</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Классические</a></li>
+										<li class="title_chapt-item"><a href="#">Акустические (вестерн)</a></li>
+										<li class="title_chapt-item"><a href="#">Электроакустические</a></li>
+										<li class="title_chapt-item"><a href="#">Silent гитары</a></li>
+										<li class="title_chapt-item"><a href="#">Электрогитары</a></li>
+										<li class="title_chapt-item"><a href="#">Бас гитары</a></li>
+										<li class="title_chapt-item"><a href="#">Укулеле, банджо, мандолины</a></li>
+										<li class="title_chapt-item"><a href="#">Усилители для гитар</a></li>
+										<li class="title_chapt-item"><a href="#">Струны</a></li>
+										<li class="title_chapt-item"><a href="#">Педали эффектов</a></li>
+										<li class="title_chapt-item"><a href="#">Чехлы, кейсы, кофры</a></li>
+										<li class="title_chapt-item"><a href="#">Стойки и подставки</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/grand-piano-overhead-view.png"
+										alt=""></span>Клавишные</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Рояли</a></li>
+										<li class="title_chapt-item"><a href="#">Пианино</a></li>
+										<li class="title_chapt-item"><a href="#">Дисклавиры</a></li>
+										<li class="title_chapt-item"><a href="#">Синтезаторы</a></li>
+										<li class="title_chapt-item"><a href="#">Цифровые пианино</a></li>
+										<li class="title_chapt-item"><a href="#">MIDI-клавиатуры</a></li>
+										<li class="title_chapt-item"><a href="#">Комбоусилители для клавишных</a></li>
+										<li class="title_chapt-item"><a href="#">Стулья и банкетки</a></li>
+										<li class="title_chapt-item"><a href="#">Стойки и подставки</a></li>
+										<li class="title_chapt-item"><a href="#">Чехлы, кейсы,сумки</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/long-trumpet.png"
+										alt=""></span>Духовые</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Трубы, Корнеты, Флюгельгорны</a></li>
+										<li class="title_chapt-item"><a href="#">Тромбоны, валторны, альты, баритоны,
+											эуфониумы, тубы</a></li>
+										<li class="title_chapt-item"><a href="#">Кларнеты, гобои, фаготы</a></li>
+										<li class="title_chapt-item"><a href="#">Саксофоны</a></li>
+										<li class="title_chapt-item"><a href="#">Флейты, флейты-пикколо</a></li>
+										<li class="title_chapt-item"><a href="#">Блок-флейты</a></li>
+										<li class="title_chapt-item"><a href="#">Средства для ухода</a></li>
+										<li class="title_chapt-item"><a href="#">Трости и мундштуки</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/drum-and-two-drumsticks.png"
+										alt=""></span>Ударные</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Акустические ударные</a></li>
+										<li class="title_chapt-item"><a href="#">Стойки и механика</a></li>
+										<li class="title_chapt-item"><a href="#">Электронные ударные</a></li>
+										<li class="title_chapt-item"><a href="#">Тарелки</a></li>
+										<li class="title_chapt-item"><a href="#">Палочки и щётки</a></li>
+										<li class="title_chapt-item"><a href="#">Пластики</a></li>
+										<li class="title_chapt-item"><a href="#">Маршевые барабаны</a></li>
+										<li class="title_chapt-item"><a href="#">Перкуссия</a></li>
+										<li class="title_chapt-item"><a href="#">Концертная перкуссия</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/inclined-cello.png" alt=""></span>Струнно-смычновые</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Скрипки</a></li>
+										<li class="title_chapt-item"><a href="#">Альты</a></li>
+										<li class="title_chapt-item"><a href="#">Виолончели</a></li>
+										<li class="title_chapt-item"><a href="#">Контрабасы</a></li>
+										<li class="title_chapt-item"><a href="#">Электронные струнно-смычковые</a></li>
+										<li class="title_chapt-item"><a href="#">Струны</a></li>
+										<li class="title_chapt-item"><a href="#">Чехлы, футляры и подставки</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/one-accordion.png" alt=""></span>Язычковые</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Аккордеоны</a></li>
+										<li class="title_chapt-item"><a href="#">Баяны</a></li>
+										<li class="title_chapt-item"><a href="#">Гармони</a></li>
+										<li class="title_chapt-item"><a href="#">Губные гармошки</a></li>
+										<li class="title_chapt-item"><a href="#">Пианики</a></li>
+										<li class="title_chapt-item"><a href="#">Сумки, чехлы, кейсы</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/tuning-fork-vibrating.png" alt=""></span>Аксессуары
+									для музыкантов</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Метрономы</a></li>
+										<li class="title_chapt-item"><a href="#">Пюпитры</a></li>
+										<li class="title_chapt-item"><a href="#">Камертоны</a></li>
+										<li class="title_chapt-item"><a href="#">Подсветка для нот</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Микрофоны и наушники</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/headphone.png" alt=""></span>Наушники</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Полноразмерные</a></li>
+										<li class="title_chapt-item"><a href="#">Вкладыши</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары для наушник</a></li>
+									
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/microphone-with-long-cable.png"
+										alt=""></span>Микрофоны проводные</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Вокальные</a></li>
+										<li class="title_chapt-item"><a href="#">Инструментальные</a></li>
+										<li class="title_chapt-item"><a href="#">Студийные</a></li>
+										<li class="title_chapt-item"><a href="#">Петличные</a></li>
+										<li class="title_chapt-item"><a href="#">Накамерные</a></li>
+										<li class="title_chapt-item"><a href="#">Гуснэки</a></li>
+										<li class="title_chapt-item"><a href="#">Хэдсеты</a></li>
+										<li class="title_chapt-item"><a href="#">Инсталляционные</a></li>
+									
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/dj-mixer.png"
+										alt=""></span>Радиосистемы</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">С ручным передатчиком</a></li>
+										<li class="title_chapt-item"><a href="#">С поясным передатчиком</a></li>
+										<li class="title_chapt-item"><a href="#">Гитарные</a></li>
+										<li class="title_chapt-item"><a href="#">Комбинированные</a></li>
+										<li class="title_chapt-item"><a href="#">Накамерные</a></li>
+										<li class="title_chapt-item"><a href="#">Передатчики</a></li>
+										<li class="title_chapt-item"><a href="#">In-ear мониторы</a></li>
+										<li class="title_chapt-item"><a href="#">Приёмники</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/vintage-radio-microphone.png"
+										alt=""></span>Аксессуары для микрофонов и радиосистем</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Ветрозащиты</a></li>
+										<li class="title_chapt-item"><a href="#">Держатели</a></li>
+										<li class="title_chapt-item"><a href="#">Стойки</a></li>
+										<li class="title_chapt-item"><a href="#">Капсюли</a></li>
+										<li class="title_chapt-item"><a href="#">Предусилители</a></li>
+									
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/headphones-with-mic.png" alt=""></span>конференц-системы</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Звук</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/dj-mixer-2.png" alt=""></span>микшерные
+									консоли</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Аналоговые</a></li>
+										<li class="title_chapt-item"><a href="#">Цифровые</a></li>
+										<li class="title_chapt-item"><a href="#">Со встроенным усилителем</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/big-speaker.png"
+										alt=""></span>усилители</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Усилители мощности</a></li>
+										<li class="title_chapt-item"><a href="#">Трансляционные</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/sound-system-with-big-speakers.png"
+										alt=""></span>Акустические системы</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Пассивные</a></li>
+										<li class="title_chapt-item"><a href="#">Активные</a></li>
+										<li class="title_chapt-item"><a href="#">Сабвуферы</a></li>
+										<li class="title_chapt-item"><a href="#">Усилительные комплекты</a></li>
+										<li class="title_chapt-item"><a href="#">Трансляционные</a></li>
+										<li class="title_chapt-item"><a href="#">Сценические мониторы</a></li>
+										<li class="title_chapt-item"><a href="#">Линейные массивы</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/dj-mixer.png" alt=""></span>Процессоры</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Аналоговые</a></li>
+										<li class="title_chapt-item"><a href="#">Вокальные</a></li>
+										<li class="title_chapt-item"><a href="#">Цифровые матричные процессоры</a></li>
+										<li class="title_chapt-item"><a href="#">Цифровые микширующие платформы</a></li>
+										<li class="title_chapt-item"><a href="#">Процессоры</a></li>
+										<li class="title_chapt-item"><a href="#">Процессоры акустических систем</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/apple-ipod.png" alt=""></span>проигрыватели</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">CD, MP3, USB, SD</a></li>
+										<li class="title_chapt-item"><a href="#">Виниловые</a></li>
+										<li class="title_chapt-item"><a href="#">Встраиваемые модули</a></li>
+										<li class="title_chapt-item"><a href="#">Аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/star-with-microphone.png" alt=""></span>караоке
+									системы</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Свет</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111860-music-festival/png/lighting-5.png" alt=""></span>Moving
+									Lights</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Головы рисующие</a></li>
+										<li class="title_chapt-item"><a href="#">Головы заливного света</a></li>
+										<li class="title_chapt-item"><a href="#">Головы лазерные</a></li>
+										<li class="title_chapt-item"><a href="#">Сканеры</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/bubbles.png" alt=""></span>Генераторы эффектов</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Дым</a></li>
+										<li class="title_chapt-item"><a href="#">Снег</a></li>
+										<li class="title_chapt-item"><a href="#">Пузыри</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111664-cinemagic/png/movie-light.png" alt=""></span>аксессуары</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Жидкость для генераторов эффектов</a>
+										</li>
+										<li class="title_chapt-item"><a href="#">Ароматизаторы для генераторов
+											эффектов</a></li>
+										<li class="title_chapt-item"><a href="#">Сумки</a></li>
+										<li class="title_chapt-item"><a href="#">Стойки, держатели</a></li>
+										<li class="title_chapt-item"><a href="#">Лампы</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111860-music-festival/png/lighting-4.png" alt=""></span>Лазеры</a>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/dj-mixer-1.png" alt=""></span>Световые
+									контроллеры DMX</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/light.png" alt=""></span>Сценическое оборудование</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/spotlight.png" alt=""></span>прожекторы</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/mirror-ball.png" alt=""></span>зеркальные шары</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/lights.png" alt=""></span>стробоскопы</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/fireworks.png" alt=""></span>Световые эффекты</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Hi-Fi & Hi-End</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/apple-ipod.png" alt=""></span>Проигрыватели</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">CD, DVD, USB, SD</a></li>
+										<li class="title_chapt-item"><a href="#">Виниловые</a></li>
+										<li class="title_chapt-item"><a href="#">Blu-ray</a></li>
+										<li class="title_chapt-item"><a href="#">Cетевые медиа-плееры</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/audio-systems.png" alt=""></span>акустические
+									системы</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Напольные</a></li>
+										<li class="title_chapt-item"><a href="#">Центрального канала</a></li>
+										<li class="title_chapt-item"><a href="#">Полочная акустика</a></li>
+										<li class="title_chapt-item"><a href="#">Сабвуферы</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/music-recorder-1.png" alt=""></span>ресиверы</a>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/electric-guitar-amplifier.png"
+										alt=""></span>Усилители</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/sound-system%20(2).png" alt=""></span>аудиосистемы</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/sound-system-with-big-speakers.png"
+										alt=""></span>домашние кинотеатры</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/microphone-with-long-cable.png"
+										alt=""></span>аксессуары для оборудования</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/shout-megaphone.png" alt=""></span>прочее
+									оборудование</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Студия</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/software.png" alt=""></span>программное обеспечение</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/long-synthesizer.png" alt=""></span>midi
+									клавиатуры</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111860-music-festival/png/equipment-box.png" alt=""></span>студийные
+									аксессуары</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111860-music-festival/png/audio-mixer.png" alt=""></span>процессоры
+									обработки звука</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/dj-mixer-2.png" alt=""></span>аудио и midi
+									интерфейсы</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/dj-mixer-1.png" alt=""></span>midi
+									контроллеры</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/car-radio.png" alt=""></span>предусилители</a>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111664-cinemagic/png/headphones.png" alt=""></span>студийные
+									мониторы</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Коммутация</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/111535-musicon/png/double-plug.png" alt=""></span>готовые
+									кабели</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Микрофонные</a></li>
+										<li class="title_chapt-item"><a href="#">Инструментальные</a></li>
+										<li class="title_chapt-item"><a href="#">Акустические</a></li>
+										<li class="title_chapt-item"><a href="#">AES/EBU, S/PDIF, DMX</a></li>
+										<li class="title_chapt-item"><a href="#">Оптические</a></li>
+										<li class="title_chapt-item"><a href="#">LAN</a></li>
+										<li class="title_chapt-item"><a href="#">MIDI, USB, Firewire</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/thread.png" alt=""></span>кабели в бухтах</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Микрофонные</a></li>
+										<li class="title_chapt-item"><a href="#">Инструментальные</a></li>
+										<li class="title_chapt-item"><a href="#">Акустические</a></li>
+										<li class="title_chapt-item"><a href="#">AES/EBU, S/PDIF, DMX</a></li>
+										<li class="title_chapt-item"><a href="#">Оптические</a></li>
+										<li class="title_chapt-item"><a href="#">LAN</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/jack-connector%20(1).png" alt=""></span>мультикоры</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Готовые</a></li>
+										<li class="title_chapt-item"><a href="#">В бухтах</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/hdmi.png" alt=""></span>соединители</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Кабельные</a></li>
+										<li class="title_chapt-item"><a href="#">Панельные</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/jack-connector.png" alt=""></span>di-box</a>
+									<ul class="sub_dropDown">
+										<li class="title_chapt-item"><a href="#">Активные</a></li>
+										<li class="title_chapt-item"><a href="#">Пассивные</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/usb.png" alt=""></span>аксессуары</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/hdmi%20(1).png" alt=""></span>переходники</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Комиссионка</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/commission.png" alt=""></span>комиссионный товар</a>
+									<ul class="sub_dropDown comission">
+										<li class="title_chapt-item"><a href="commision_catalog.html">Гитары</a></li>
+										<li class="title_chapt-item"><a href="#">Клавишные</a></li>
+										<li class="title_chapt-item"><a href="#">Духовые</a></li>
+										<li class="title_chapt-item"><a href="#">Ударные</a></li>
+										<li class="title_chapt-item"><a href="#">Струнно-смычковые</a></li>
+										<li class="title_chapt-item"><a href="#">Язычковые</a></li>
+										<li class="title_chapt-item"><a href="#">Наушники</a></li>
+										<li class="title_chapt-item"><a href="#">Микрофоны проводные</a></li>
+										<li class="title_chapt-item"><a href="#">Радиосистемы</a></li>
+										<li class="title_chapt-item"><a href="#">Конференц-системы</a></li>
+										<li class="title_chapt-item"><a href="#">Микшерные консоли</a></li>
+										<li class="title_chapt-item"><a href="#">Усилители</a></li>
+										<li class="title_chapt-item"><a href="#">Акустические системы</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt last">
+									<ul class="sub_dropDown comission">
+										<li class="title_chapt-item"><a href="#">Процессоры</a></li>
+										<li class="title_chapt-item"><a href="#">Караоке системы</a></li>
+										<li class="title_chapt-item"><a href="#">Проигрыватели</a></li>
+										<li class="title_chapt-item"><a href="#">Ресиверы</a></li>
+										<li class="title_chapt-item"><a href="#">Домашние кинотеатры</a></li>
+										<li class="title_chapt-item"><a href="#">Аудиосистемы</a></li>
+										<li class="title_chapt-item"><a href="#">Аудио и MIDI интерфейсы</a></li>
+										<li class="title_chapt-item"><a href="#">MIDI клавиатуры</a></li>
+										<li class="title_chapt-item"><a href="#">MIDI контроллеры</a></li>
+										<li class="title_chapt-item"><a href="#">Предусилители</a></li>
+										<li class="title_chapt-item"><a href="#">Процессоры обработки звука</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt last">
+									<ul class="sub_dropDown comission">
+										<li class="title_chapt-item"><a href="#">Moving Lights</a></li>
+										<li class="title_chapt-item"><a href="#">Генераторы Эффектов</a></li>
+										<li class="title_chapt-item"><a href="#">Лазеры</a></li>
+										<li class="title_chapt-item"><a href="#">Световые контроллеры DMX</a></li>
+										<li class="title_chapt-item"><a href="#">Световые эффекты</a></li>
+										<li class="title_chapt-item"><a href="#">Сценическое оборудование</a></li>
+										<li class="title_chapt-item"><a href="#">Прожекторы</a></li>
+										<li class="title_chapt-item"><a href="#">Стробоскопы</a></li>
+									</ul>
+								</li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;"><span><img
+										src="img/icon_menu/agreement.png" alt=""></span>условия комиссионного
+									магазина</a></li>
+							</ul>
+						</li>
+						<li class="last_child">
+							<a href="#" class="line_drop" rel="nofollow"></a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="nav-2">
+					<ul class="nav">
+						<li>
+							<a href="rent.html">Аренда</a>
+							<ul class="dropDown">
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;">Аренда
+									зала со сценой и звуковым оборудованием</a></li>
+								<li class="title_chapt"><a href="#"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;">Аренда
+									звукового оборудования и светоприборов</a></li>
+								<li class="title_chapt"><a href="rent.html"
+								                           style="font-size: 18px;padding-left: 1%;margin-bottom: 1.5rem;">Аренда
+									акустических и цифровых фортепиано</a></li>
+							</ul>
+						</li>
+						<li><a href="install.html">Инсталляция</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="page_wrapp-install single_pages">
+
+	<section class="page_head">
+		<div class="wrapper">
+			<div class="row">
+				<div class="content">
+					<div class="breadcrumb">
+						<a href="index.html">Главная </a><span>/ </span>
+						<a href="#">Бренды</a>
+					</div>
+					<h1 class="title title_page-head">Бренды</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="desc_inst">
+		<div class="wrapper">
+			<div class="row">
+				<div class="content">
+					<div class="desc_inst-text">
+						<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Main contain-->
+
+	<section class="our_brands">
+		<div class="wrapper">
+			<div class="row">
+				<div class="content">
+					<div class="brands_slider">
+
+						<ul class="bxslider_brands">
+							<li><a href="brand_single.html"><img src="img/brand/part_01.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_02.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_03.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_04.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_01.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_02.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_03.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_04.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_01.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_02.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_03.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_04.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_01.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_02.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_03.png" alt=""></a>
+								<a href="brand_single.html"><img src="img/brand/part_04.png" alt=""></a></li>
+						</ul>
+						<div class="outside">
+							<p><span id="slider-prev" class="main_scroll"></span>  <span id="slider-next" class="main_scroll"></span></p>
+						</div>
+
+					</div>
+					<div class="brands_sliderOff">
+						<ul class="tutorial_brands">
+							<li><a href="brand_single.html"><img src="img/brand/part_01.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_02.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_03.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_04.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_01.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_02.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_03.png" alt=""></a></li>
+							<li><a href="brand_single.html"><img src="img/brand/part_04.png" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="brands_alphabet">
+						<ul>
+							<li class="alphabet_item"><a href="brand_litera.html">A</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">B</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">C</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">D</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">E</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">F</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">G</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">H</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">I</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">J</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">K</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">L</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">M</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">N</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">O</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">P</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">Q</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">R</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">S</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">T</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">U</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">V</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">W</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">X</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">Y</a></li>
+							<li class="alphabet_item"><a href="brand_litera.html">Z</a></li>
+						</ul>
+					</div>
+					<div class="btn btn_viewMore"><a href="#">показать все</a></div>
+
+					<!--TODO all list brand-->
+					<div class="brands_all-list" style="display: none;">
+						<ul>
+							<li><a href="brand_single.html">AMC</a></li>
+							<li><a href="brand_single.html">American Audio</a></li>
+							<li><a href="brand_single.html">American DJ</a></li>
+							<li><a href="brand_single.html">Amphenol</a></li>
+							<li><a href="brand_single.html">Audio-Spectrum</a></li>
+							<li><a href="brand_single.html">Audio-Technica</a></li>
+							<li><a href="brand_single.html">Avid	B.C.Rich</a></li>
+							<li><a href="brand_single.html">Bosendorfer</a></li>
+							<li><a href="brand_single.html">Crafter</a></li>
+							<li><a href="brand_single.html">Drumfire</a></li>
+							<li><a href="brand_single.html">DV Mark</a></li>
+							<li><a href="brand_single.html">Elation</a></li>
+							<li><a href="brand_single.html">Ernie </a></li>
+							<li><a href="brand_single.html">Ball</a></li>
+							<li><a href="brand_single.html">Hennessey</a></li>
+							<li><a href="brand_single.html">Hotwires</a></li>
+							<li><a href="brand_single.html">Istanbul</a></li>
+							<li><a href="brand_single.html">JDM</a></li>
+							<li><a href="brand_single.html">JTS</a></li>
+							<li><a href="brand_single.html">Klotz</a></li>
+							<li><a href="brand_single.html">Kustom</a></li>
+							<li><a href="brand_single.html">Laney</a></li>
+							<li><a href="brand_single.html">Mark Drum</a></li>
+							<li><a href="brand_single.html">Markbass</a></li>
+							<li><a href="brand_single.html">Mendelssohn</a></li>
+							<li><a href="brand_single.html">Music Man</a></li>
+							<li><a href="brand_single.html">On-Stage Gear</a></li>
+							<li><a href="brand_single.html">On-Stage Stands</a></li>
+							<li><a href="brand_single.html">Peecker Sound</a></li>
+							<li><a href="brand_single.html">Petrof</a></li>
+							<li><a href="brand_single.html">Regaltip</a></li>
+							<li><a href="brand_single.html">RMV</a></li>
+							<li><a href="brand_single.html">SpongeBob</a></li>
+							<li><a href="brand_single.html">Stagg</a></li>
+							<li><a href="brand_single.html">Steinberg</a></li>
+							<li><a href="brand_single.html">String Swing</a></li>
+							<li><a href="brand_single.html">Tanglewood</a></li>
+							<li><a href="brand_single.html">Weltmeister</a></li>
+							<li><a href="brand_single.html">X-Treme</a></li>
+							<li><a href="brand_single.html">Yamaha</a></li>
+							<li><a href="brand_single.html">Kustom</a></li>
+							<li><a href="brand_single.html">Laney</a></li>
+							<li><a href="brand_single.html">Mark Drum</a></li>
+							<li><a href="brand_single.html">Markbass</a></li>
+							<li><a href="brand_single.html">Mendelssohn</a></li>
+							<li><a href="brand_single.html">Music Man</a></li>
+							<li><a href="brand_single.html">On-Stage Gear</a></li>
+							<li><a href="brand_single.html">On-Stage Stands</a></li>
+							<li><a href="brand_single.html">Peecker Sound</a></li>
+							<li><a href="brand_single.html">Petrof</a></li>
+							<li><a href="brand_single.html">Regaltip</a></li>
+							<li><a href="brand_single.html">RMV</a></li>
+							<li><a href="brand_single.html">SpongeBob</a></li>
+							<li><a href="brand_single.html">Stagg</a></li>
+							<li><a href="brand_single.html">Steinberg</a></li>
+							<li><a href="brand_single.html">String Swing</a></li>
+							<li><a href="brand_single.html">Tanglewood</a></li>
+							<li><a href="brand_single.html">Weltmeister</a></li>
+							<li><a href="brand_single.html">X-Treme</a></li>
+							<li><a href="brand_single.html">Yamaha</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="send_mail">
+		<div class="wrapper">
+			<div class="row">
+				<div class="content">
+					<h2 class="title title_calback">Есть вопросы? Мы ответим!</h2>
+					<form action="send" class="callback">
+						<label for="you_names"><span>Ваше имя</span><input type="text" id="you_names" placeholder="Ваше имя"></label>
+						<label for="you_email"><span>Ваш e-mail</span><input type="email" id="you_email" placeholder="Ваш e-mail"></label>
+						<label for="thelphone"><span>Номер телефона</span><input type="tel" id="thelphone" placeholder="Номер телефона"></label>
+						<label for="you_message"><span>Ваше сообщение</span><textarea type="text" id="you_message" placeholder="Ваше сообщение"></textarea></label>
+						<button type="submit" class="btn btn_callback" value="ОТПРАВИТЬ">ОТПРАВИТЬ</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="seo">
+		<div class="wrapper">
+			<div class="row">
+				<div class="content">
+					<div class="seos_text">
+						<p>Компания «In-Jazz», официальный представитель корпорации YAMAHA в Украине, основана в 1993 году и является одним из крупнейших импортеров и дистрибьюторов высококачественных музыкальных инструментов, профессионального звукового, светового и студийного компьютерного оборудования.
+							Мы предлагаем широкий спектр акустических музыкальных инструментов (рояли, пианино, гитары, скрипки, духовые, перкуссионные и ударные инструменты), современные электронные инструменты (клавишные синтезаторы, цифровые и сценические пиано, электронные рояли, тон-генераторы), оборудование для звукоусиления (акустические системы, усилители мощности, цифровые и аналоговые микшерные пульты, процессоры обработки звука, микрофоны и наушники), компьютерную периферию для музыкантов, музыкальные аксессуары. Наша компания является официальным представителем таких всемирно известных торговых марок, как YAMAHA, Audio-Technica, Adams, AMC, American Audio, Amphenol, Arion, Avant Electronics, Avid, Boesendorfer, Dynatone, Elation, Ernie Ball, Groove Tubes, Istanbul, JDM, JTS, Klotz, Kustom, Marca, Mendelssohn, Mighty Bright, Music Man, Peecker Sound, Petrof, Pokar, Rhodes, Regal Tip, RMV, Spectrasonics, Stagg, Steinberg, String Swing, Tanglewood, Weltmeister, X-Treme.
+							В фирменных магазинах покупатели могут приобрести необходимый товар, а также получить консультацию компетентных специалистов, которые помогут выбрать товары, наиболее полно отвечающие потребностям клиента. В демонстрационных залах магазинов можно детально ознакомиться с представленными музыкальными инструментами, концертным звуковым, световым и DJ оборудованием, оценить их возможности, звучание и функциональность. Постоянное расширение ассортимента продукции в магазинах компании обеспечивает достижение главной цели – удовлетворение интересов всех покупателей.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!--footer-->
+<footer>
+	<div class="wrapper">
+		<div class="row">
+			<div class="content">
+				<nav class="foo_nav">
+					<ul class="foo_menu">
+						<li><a href="about.html">О нас</a></li>
+						<li><a href="about_product.html">Все о товарах</a></li>
+						<li><a href="discounts.html">Дисконтная программа</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li class="active"><a href="brand.html">Бренды</a></li>
+						<li><a href="dillers.html">Официальные дилеры </a></li>
+						<li><a href="sevices.html">Сервисный центр</a></li>
+					</ul>
+				</nav>
+				<div class="foo_copy">
+					<div class="dev_by">Developed by <span><a href="#">S Produccion</a></span></div>
+					<div class="corrupted">
+						<p>Использование материалов InJazz разрешено только при наличии активной ссылки на источник.</p>
+						<p>Все права на изображения и тексты принадлежат их авторам. www.InJazz.ua 2015-2017</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<a id="button-up" href="#" class="button-up"><span><i class="t-icon icon-arrleft"></i></span></a>
+
+<script>
+	/*section.subscribe>.wrapper>.row>.content>*/
+
+	//		brands_slider
+	$(document).ready(function(){
+		$( '#nav li:has(ul)' ).doubleTapToGo();
+
+		$(function(){
+			$('#mobil_menu').slicknav({
+				label: '',
+				duration: 1000,
+				easingOpen: "easeOutBounce", //available with jQuery UI
+				prependTo:'#nav'
+			});
+		});
+
+
+
+		$('.bxslider_brands').bxSlider({
+//			minSlides: 4,
+//			maxSlides: 8,
+			slideWidth: 'auto',
+			slideMargin: 0,
+			pager: false,
+			nextSelector: '#slider-next',
+			prevSelector: '#slider-prev',
+			nextText: "<div class='icon-arrleft'></div>",
+			prevText: "<div class='icon-arrright'></div>"
+		});
+		$('.main_slider').bxSlider({
+			//minSlides: 1,
+			//maxSlides: 1,
+			slideWidth: 'auto',
+//			slideMargin: 10,
+			adaptiveHeight: true,
+			pager: false,
+			nextSelector: '#slider_main-next',
+			prevSelector: '#slider_main-prev',
+			nextText: "",
+			prevText: ""
+		});
+
+		$(".btn_viewMore").on('click', function (e) {
+			var all_brands = $(".brands_all-list"),
+				btn_all_brands = $(".btn_viewMore");
+			all_brands.toggle();
+			btn_all_brands.toggle();
+		});
+
+		var t1 = new Tabs("#tabs_services_1");
+
+		$("#thelphone").inputmask({"mask": "+38(099) 999-99-99"});
+
+		$('.crsl-items').carousel({
+			visible: 3,
+			itemMaxWidth: 370,
+			itemEqualHeight: 370,
+			itemMargin: 15,
+		});
+
+		$("a[href=#]").on('click', function(e) {
+			e.preventDefault();
+		});
+		$('.testimonials_ranck').raty({
+			readOnly: true,
+			score: function() {
+				return $(this).attr('data-score');
+			},
+			iconRange: [
+				{ range: 1, on: 'icon-star-2', off: 'icon-star-empty-2' },
+				{ range: 2, on: 'icon-star-2', off: 'icon-star-empty-2' },
+				{ range: 3, on: 'icon-star-2', off: 'icon-star-empty-2' },
+				{ range: 4, on: 'icon-star-2', off: 'icon-star-empty-2' },
+				{ range: 5, on: 'icon-star-2', off: 'icon-star-empty-2' }
+			]
+		});
+
+
+
+
+	});
+
+</script>
+
+
+
+</body>
+</html>

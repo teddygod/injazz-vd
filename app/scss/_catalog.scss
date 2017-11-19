@@ -1,0 +1,297 @@
+//TODO _catalog.scss
+.catalog {
+  &_page {padding: 2rem 0;}
+  &_block {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: space-between;
+	align-items: stretch;
+  }
+
+}
+.breadcrumb {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: baseline;
+  opacity: .8;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  @media screen and (max-width: 768px){
+	display: none;
+  }
+  a{ padding: 0 3px;
+	opacity: .8;
+	transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+	&:hover{text-decoration: underline; padding: 0 3px; opacity: 1;}}
+}
+
+//TODO правки jquery-ui
+
+.ui-widget-content {
+  border: none;
+  background: transparent;
+}
+.ui-widget.ui-widget-content {
+  border: none;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl {
+  border-top-left-radius:0;
+}
+.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr {
+  border-top-right-radius:0;
+}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl {
+  border-bottom-left-radius:0;
+}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br {
+  border-bottom-right-radius:0;
+}
+.ui-tabs .ui-tabs-panel {
+  padding: 0;
+}
+.ui-helper-reset {
+  line-height: initial;
+}
+.ui-widget-header {
+  border: none;
+  background: inherit;
+  color: inherit;
+  font-weight: initial;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: none;
+  background: transparent;
+  font-weight: normal;
+  color: #fff;
+}
+.ui-tabs .ui-tabs-nav li {
+  float: none;
+  margin: 0;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.ui-tabs .ui-tabs-nav {
+  padding: 0;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: none;
+  background: transparent;
+  font-weight: normal;
+  color: initial;
+}
+
+//TODO end jquery-ui
+
+.bay_with_item, .you_sea{
+
+  padding: 2rem 0;
+  .goods {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: space-between;
+
+	@media screen and (max-width: 768px){
+	  -ms-flex-wrap: wrap;
+	  flex-wrap: wrap;
+	}
+	&_item {
+	  max-width: 23%;
+
+	  @media screen and (max-width: 768px){
+		max-width: 48%;
+		width: 48%;
+		margin-bottom: 2rem;
+	  }
+	  @media screen and (max-width: 600px){
+		max-width: 100%;
+		width: 100%;
+		margin-bottom: 2rem;
+	  }
+	}
+  }
+  .outside p {
+	display: block;
+  }
+  .main_scroll {
+	position: relative;
+	top: -20rem;
+	font-size: 3rem;
+	color: #f6f6f6;
+	display: flex;
+	justify-content: space-between;
+	& a{color: #9b9b9b;}
+	.bx-prev {
+	  display: block;
+	  position: absolute;
+	  left: -4rem;
+	  @media screen and (max-width: 1024px){
+		left: -2rem;
+	  }
+	  @media screen and (max-width: 768px){
+		display: none;
+	  }
+	}
+	.bx-next {
+	  display: block;
+	  position: absolute;
+	  right: -3rem;
+	  @media screen and (max-width: 1024px){
+		right: -1rem;
+	  }
+	  @media screen and (max-width: 768px){
+		display: none;
+	  }
+	}
+  }
+}
+.s-pagination {
+  text-align: center;
+  .pagination-holder {
+	position: relative;
+	padding: 0 50px;
+	height: 45px;
+	display: inline-block;
+	.pagination-content {
+	  //background: #fff;
+	  padding: 0 15px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  li {
+		width: 40px;
+		@media screen and (max-width: 600px){
+		  width: 25px;
+		}
+		a {
+		  width: 100%;
+		  display: inline-block;
+		  font-size: 18px;
+		  line-height: 45px;
+		  color: #222222;
+		  @media screen and (max-width: 600px){
+			font-size: 1.5rem;
+			line-height: normal;
+		  }
+		  &:hover {
+			color: #222222;
+		  }
+		}
+		&.active a {
+		  font-weight: bold;
+		}
+		.pag_btn {
+		  position: absolute;
+		  display: none;
+		  height: 100%;
+		  line-height: 100%;
+		  width: 50px;
+		  top: 0;
+		  left: 0;
+		  img {
+			display: inline-block;
+			height: 20px;
+			width: auto;
+			position: relative;
+			top: 50%;
+			transform-origin: 50%;
+		  }
+		  &_right {
+			right: 0;
+			left: auto;
+			img {
+			  transform: translateY(-50%) rotate(180deg);
+			}
+		  }
+		  &_left{
+			img {
+			  transform: translateY(-50%);
+			}
+		  }
+		  &.visible {
+			display: inline-block;
+		  }
+		}
+	  }
+	  .prev.disabled {
+		cursor: default;
+	  }
+	}
+
+  }
+
+}
+.bay_with_item, .you_sea {
+  padding: 2rem 0;
+  .bx-viewport {
+	min-height: 520px;
+	@media screen and (min-width: 1300px){
+	  min-height: 570px;
+	}
+	@media screen and (min-width: 1300px){
+	  min-height: 570px;
+	}
+  }
+  .goods {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: space-between;
+
+	@media screen and (max-width: 768px){
+	  flex-wrap: wrap;
+	}
+	&_item {
+	  max-width: 23%;
+
+	  @media screen and (max-width: 768px){
+		max-width: 48%;
+		margin-bottom: 2rem;
+	  }
+	}
+  }
+  .outside p {
+	display: block;
+  }
+  .main_scroll {
+	position: relative;
+	top: -20rem;
+	font-size: 3rem;
+	color: #f6f6f6;
+	display: flex;
+	justify-content: space-between;
+	& a {
+	  color: #9b9b9b;
+	}
+	.bx-prev {
+	  display: block;
+	  position: absolute;
+	  left: -4rem;
+	  @media screen and (max-width: 1024px) {
+		left: -4rem;
+	  }
+	  @media screen and (max-width: 768px) {
+		display: none;
+	  }
+	}
+	.bx-next {
+	  display: block;
+	  position: absolute;
+	  right: -3rem;
+	  @media screen and (max-width: 1024px) {
+		right: -3rem;
+	  }
+	  @media screen and (max-width: 768px) {
+		display: none;
+	  }
+	}
+  }
+}
+
+
+
+
+
+
+

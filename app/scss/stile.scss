@@ -1,0 +1,47 @@
+/*
+Project: InJazz
+Version: 1.0
+Aitor: Teddygod
+*/
+
+//TODO for setings
+
+@import "resets";
+
+@import "setings";
+
+@import "header";
+
+@import "main";
+
+@import "goods";
+
+@import "catalog";
+
+@import "filter";
+
+@import "lory";
+
+@import "footer";
+
+@import "media_all";
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 100500;
+}
+
+#page-preloader .spinner {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url('../img/spinner.gif') no-repeat 50% 50%;
+  margin: -16px 0 0 -16px;
+}
